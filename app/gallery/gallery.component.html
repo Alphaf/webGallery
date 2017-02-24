@@ -1,0 +1,49 @@
+<body>
+   <div>
+    <h1>MyGallery</h1>
+    <hr>
+  </div>
+<ul class="topnav">
+  <li><a  href="/">Home</a></li>
+  <li><a href="/login">LOGIN</a></li>
+  <li><a class="active" href="/gallery">LIST GALLERY</a></li>
+  <li class="#about"><a href="#about">About</a></li>
+</ul>
+<div class="responsive"
+      *ngFor="let file of files"
+      [ngStyle]="{'background-image': 'url('+ file.src +')','width':'400px','height':'200px'}">
+  <div class="img">
+  </div>
+</div>
+
+<div class="clearfix"></div>
+<div class="image-upload"
+   
+>
+  <div class="file-upload hr-inline-group">
+    <label class="upload-button">
+      <div id="selectImage">{{buttonCaption}}</div>
+      <input
+        type="file"
+        accept="image/*"
+        multiple (change)="fileChange(input.files)"
+        #input>
+    </label>
+  </div>
+  <div *ngIf="preview" class="image-container hr-inline-group">
+    <div
+      class="image"
+      *ngFor="let file of files"
+      [ngStyle]="{'background-image': 'url('+ file.src +')'}"
+    > 
+         <div *ngIf="file.pending" class="loading-overlay">
+        <div class="spinningCircle"></div>
+      </div>
+      <div *ngIf="!file.pending" class="x-mark" (click)="deleteFile(file)">
+        <span class="close"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>

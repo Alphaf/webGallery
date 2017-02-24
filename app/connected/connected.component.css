@@ -1,0 +1,117 @@
+body {
+    
+background-image: url('app/images/black_background_wood-wallpaper-1920x1200.jpg');
+color:yellowgreen;
+    /* Full height */
+    height: 100%; 
+     position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+form {
+    border:none;
+position: relative;
+left: 0px;
+
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+padding: 10px 10px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid green;
+box-sizing: border-box;
+background-color: white;
+color: black;
+}
+a.button2{
+     text-decoration: none;
+    color:white;
+     color: initial;
+     padding: 12px 20px;
+    background-color: red;
+}
+a.button {
+    text-decoration: none;
+    color: initial;
+    background-color: sandybrown;
+color: white;
+padding: 12px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+position: relative;
+width: 230px;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+   color: sandybrown;
+padding: 16px;
+/*background-image: url('http://www.freebiesgallery.com/wp-content/uploads/2012/08/dark-website-backgrounds-7.jpg');*/
+position: relative;
+top: 0px;
+width: 400px;
+left: 551px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
